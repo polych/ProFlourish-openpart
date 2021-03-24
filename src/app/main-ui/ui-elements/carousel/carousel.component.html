@@ -1,0 +1,19 @@
+<div class="carousel-block">
+  <h3>Keep Reading</h3>
+
+  <div class="carousel">
+    <div class="carousel-tile" *ngFor="let tile of currentTiles" @carouselAnimation>
+      <img src="" alt="">
+      <div>
+        <p>{{tile.part}}</p>
+        <h5>{{tile.title}}</h5>
+      </div>
+    </div>
+    <div class="carousel-left" (click)='onPreviousClickTile()'><i></i></div>
+    <div class="carousel-right" (click)='onNextClickTile()'><i></i></div>
+
+    <div class="carousel-pagination">
+      <i *ngFor="let tab of tilesArr; let i = index" (click)='onPaginClick(i)' [ngClass]="{'current': i == range}"></i>
+    </div>
+  </div>
+</div>

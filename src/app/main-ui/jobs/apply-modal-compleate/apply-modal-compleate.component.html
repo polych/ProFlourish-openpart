@@ -1,0 +1,9 @@
+<div class="apply-compleate">
+  <img src="/assets/images/apply-success.svg" alt="">
+  <h5>You did it! </h5>
+  <p>Your application has been received.</p>
+  <p class="smaller-p smaller-p-gray">You've successfully submitted your application for your virtual dream job!
+    You'll hear directly from the company if they're interested in moving forward with your application.</p>
+  <button class="red-btn" (click)='close_Modal()'>Go to Dashboard</button>
+  <button class="red-border-btn" (click)='close_Modal()' [routerLink]="['/search']">Apply for more jobs!</button>
+</div>

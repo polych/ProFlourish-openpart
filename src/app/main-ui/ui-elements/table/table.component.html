@@ -1,0 +1,31 @@
+<div class="table">
+  <div>
+    <h3>{{table.title}}</h3>
+    <table >
+      <thead>
+        <tr>
+          <td *ngFor="let hcell of table.table.headers">
+            <h5>
+              {{hcell}}
+            </h5>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of table.table.body">
+          <td *ngFor="let bcell of row"><p>{{bcell}}</p></td>
+        </tr>
+      </tbody>
+
+    </table>
+    <hr>
+    <p>
+      {{table.subtitle}}
+    </p>
+    <p class="ps">
+      {{table.ps}}
+    </p>
+  </div>
+  <img src="/assets/vectors-new/table.svg" alt="">
+
+</div>

@@ -1,0 +1,124 @@
+@import "/src/assets/scss/colors";
+.vsa {
+  width: 100vw;
+}
+
+.do-i {
+  width: 1110px;
+  padding: 100px 135px 100px 90px;
+  margin-bottom: 20px;
+  background-color: $gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: flex;
+    width: 100%;
+    background-color: $gray;
+    justify-content: center;
+  }
+  h3 {
+    width: 500px;
+    margin-bottom: 20px;
+  }
+  pre,
+  p {
+    font-size: 18px;
+    line-height: 27px;
+    color: $dark-gray-color;
+    width: 540px;
+    white-space: pre-wrap; /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    white-space: -pre-wrap; /* Opera 4-6 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word;
+    strong {
+      font-weight: bolder;
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+  img {
+    width: 300px;
+    height: 300px;
+  }
+}
+.how-much {
+  width: 1110px;
+  padding: 100px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $gray;
+  &-container {
+    display: flex;
+    justify-content: center;
+    background-color: $gray;
+  }
+  &-desc {
+    width: 450px;
+    position: relative;
+    > p {
+      margin: 20px 0;
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+  &-skill {
+    width: 445px;
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    p {
+      margin-left: 30px;
+      font-size: 17px;
+      line-height: 20px;
+      strong {
+        font-weight: bolder;
+      }
+    }
+    &:hover {
+      color: $white;
+      background-color: $black;
+      p {
+        color: $white;
+      }
+    }
+  }
+}
+.first,
+.second {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+}
+.first {
+  background-color: $gray;
+  > div {
+    display: flex;
+    justify-content: space-between;
+    width: 920px;
+    img {
+      margin-left: 20px;
+    }
+    >div {
+      width: 540px;
+    }
+    h3 {
+      margin-bottom: 20px;
+    }
+  }
+}
+.second div{
+  width: 730px;
+  h3 {
+    margin-bottom: 20px;
+  }
+}

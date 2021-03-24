@@ -1,0 +1,46 @@
+<div class="wc-banner">
+  <div *ngIf="router.url !== '/'; else homepage">
+    <div class="wc-banner-header">
+      <div class="wc-banner-text">
+        <h1 [ngStyle]="{'width': wcBanner.titlewidth}">{{wcBanner.title}}</h1>
+        <p class="gray">{{wcBanner.data}}</p>
+        <button *ngIf="!wcBanner.filters && childRoute" [routerLink]="['/search']" type="submit"
+          class="red-btn">{{wcBanner.buttonText}} ??????????????</button>
+        <button *ngIf="!wcBanner.filters && !childRoute" [routerLink]="['/search']" type="submit"
+          class="red-btn">{{wcBanner.buttonText}}</button>
+
+      </div>
+      <img src="{{wcBanner.image}}" alt="">
+    </div>
+
+  </div>
+  <ng-template #homepage>
+    <div class="wc-homepage" >
+      <div class="wc-homepage-header">
+        <div class="wc-homepage-text">
+          <h1>{{wcBanner.title}}</h1>
+          <p class="gray">{{wcBanner.data}}</p>
+        </div>
+      </div>
+      <form class="wc-homepage-filters" *ngIf="wcBanner.filters">
+        <div class="myselect">
+          <myselect [title]="'Job Category'" [placeHolder]="'Select Job Category'"
+            [selectItems]="['Administrator', 'Sales', 'SMM', 'Design', 'Dev']">
+          </myselect>
+        </div>
+        <div class="myselect">
+          <myselect [title]="'Virtual Region'" [placeHolder]="'Select Virtual Region'"
+            [selectItems]="['Administrator', 'Sales', 'SMM', 'Design', 'Dev']">
+          </myselect>
+        </div>
+        <div class="myselect">
+          <myselect [title]="'Work Types'" [placeHolder]="'Select Work Types'"
+            [selectItems]="['Administrator', 'Sales', 'SMM', 'Design', 'Dev']">
+          </myselect>
+        </div>
+        <button type="submit" class="red-btn" [routerLink]="['/search']">{{wcBanner.buttonText}}</button>
+      </form>
+    </div>
+  </ng-template>
+
+</div>

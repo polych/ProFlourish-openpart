@@ -1,0 +1,62 @@
+<div class="test-block">
+  <app-header></app-header>
+  <div class="contacts-page">
+    <div class="contacts">
+      <div class="back">
+        <a href="">
+          <i class="back-arrow"></i>
+          Back
+        </a>
+        <div>
+          <a href=""><u>Home</u></a> → Contact Us
+        </div>
+      </div>
+
+      <div class="contact">
+        <h1>Contact Us</h1>
+        <p>We’d love to hear from you! How can we help you find your next ‘perfect fit’ hire, or virtual dream job?</p>
+      </div>
+
+      <div class="contacts-block">
+        <div class="contacts-form">
+          <h4>Get in touch and tell us how we can help you by completing the form below:</h4>
+          <div>
+            <label for="name">Name*</label>
+            <input type="text" placeholder="Enter your name" id="name">
+          </div>
+          <div>
+            <label for="email">Email*</label>
+            <input type="email" placeholder="Enter your email" id="email">
+          </div>
+          <div class="myselect">
+            <myselect [title]="'Level of education'" [placeHolder]="'Choose Level'" [label]="'Level of education'"
+            [selectItems]="['Administrator', 'Sales', 'SMM', 'Design', 'Dev']">
+          </myselect>
+          </div>
+          <div>
+            <label for="massage">Message*</label>
+            <textarea id="massage" placeholder="Type here..."></textarea>
+          </div>
+          <button class="red-btn">Get In Touch</button>
+        </div>
+
+
+        <div class="contacts-refs">
+          <h5>
+            Check Our Answers to Our Most Frequently Asked Questions!
+          </h5>
+          <a href="" class="blue-a underline">How to correctly indicate the position in the resume?</a>
+          <a href="" class="blue-a underline">Sed tellus ullamcorper lorem odio orci. Molestie odio?</a>
+          <a href="" class="blue-a underline">Purus sed arcu eget at fames. Mauris odio erat?</a>
+          <a href="" class="blue-a underline">Quis quam ut sed facilisis tellus. Ullamcorper vel in?</a>
+          <a href="" class="blue-a underline">Sagittis massa nisi nulla quis lectus in laoreet vitae?</a>
+          <a href="" class="blue-a underline">Ipsum potenti lorem volutpat, fermentum interdum?</a>
+          <p>Don't see your question here? View our complete list <a href="" class="blue-a underline">Here</a></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>

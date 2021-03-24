@@ -1,0 +1,111 @@
+<div class="body">
+  <app-header></app-header>
+  <main class="job-page">
+    <div class="job-page-header">
+      <div class="back">
+        <a (click)='_location.back()'>
+          <i class="back-arrow"></i>
+          Back
+        </a>
+        <div>
+          <a [routerLink]="['']"><u>Home </u></a>
+          &nbsp;→&nbsp;
+          <a (click)='_location.back()'><u>Home</u></a>
+          &nbsp;→ Find Your Virtual Dream Job
+        </div>
+      </div>
+      <div class="page-header">
+        <h2>{{job?.job_title}}</h2>
+      </div>
+    </div>
+    <div class="job-page-body">
+      <div class="jobCard">
+        <div class="jobCard-buttons">
+          <div>
+            <button class="border-btn">Add to favorites</button>
+            <button class="black-btn" (click)="openModal()">Apply</button>
+          </div>
+
+          <i>???</i>
+
+        </div>
+        <div class="jobCard-title">
+          <h5>{{job?.job_title}}</h5>
+          <h5 *ngIf="job?.salary">{{job?.salary}}</h5>
+          <h5 *ngIf="!job?.salary">Salary is Not Listed <b>$ -</b></h5>
+
+        </div>
+        <div class="jobCard-desc">
+          <img src="{{job?.image}}" alt="">
+
+          <div class="jobCard-desc-rows">
+            <div>
+              <i class="user-icon"></i>
+              <div>
+                <p class="smaller-p"><b>{{job?.company}}</b></p>
+                <p class="smaller-p smaller-p-gray">{{job?.comp_desc}}</p>
+
+              </div>
+            </div>
+            <div>
+              <i class="location-icon"></i>
+              <div>
+                <p class="smaller-p"><b>{{job?.city}}</b></p>
+                <p class="smaller-p smaller-p-gray">{{job?.street}}</p>
+              </div>
+            </div>
+            <div>
+              <i class="clock-icon2"></i>
+              <p class="smaller-p"><b>{{job?.work_time}}</b></p>
+            </div>
+            <div class="jobCard-desc-rows-footer">
+              <div class="border-block"><i class="paper-icon"></i>{{job?.department}}</div>
+              <div class="border-block"><i class="users-icon"></i>More Than {{job?.humans}} People</div>
+              <div class="share">
+                <a class="share-fb"></a>
+                <a class="share-insta"></a>
+                <a class="share-ptr"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="jobCard-about">
+          <h5>About</h5>
+          <pre>{{job?.desc}}</pre>
+
+        </div>
+        <div class="jobCard-buttons">
+          <div>
+            <button class="border-btn">Add to favorites</button>
+            <button class="black-btn" (click)="openModal()">Apply</button>
+          </div>
+        </div>
+
+        <div class="jobCard-footer">
+          <div class="share">
+            <small>Share</small>
+            <a class="share-fb"></a>
+            <a class="share-insta"></a>
+            <a class="share-ptr"></a>
+          </div>
+          <div class="border-block">
+            {{job?.added|date}}
+          </div>
+        </div>
+      </div>
+      <div class="similar">
+        <h5>Similar Jobs</h5>
+        <div class="similar-job" *ngFor="let sJob of jobs |slice:0:5">
+          <img src="{{sJob.image}}" alt="">
+          <div>
+            <p class="smaller-p smaller-p-gray">{{sJob.company}}</p>
+            <h5>{{sJob.job_title}}</h5>
+            <h5>{{sJob.salary}}</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <app-footer></app-footer>
+</div>
+

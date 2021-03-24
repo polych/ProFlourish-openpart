@@ -1,0 +1,86 @@
+<div class="signUp">
+  <h1>Sign up</h1>
+
+
+  <div class="user-type">
+    <div class="user-type-seeker" [ngClass]="{'clicked': userType == 'seeker'}" (click)="userType = 'seeker'">I’m a job seeker</div>
+    <div class="user-type-employee" [ngClass]="{'clicked': userType == 'employee'}" (click)="userType = 'employee'">I'm looking to hire</div>
+  </div>
+  <div class="signUp-container">
+
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="auth-form">
+      <div class="form-control">
+        <label for="email">Email*</label>
+        <input type="email" formControlName="email" placeholder="Enter your email" #userEmail required autofocus>
+        <div *ngIf="signUpForm.controls.email.invalid && isSubmitted" class="form-control-validators">
+          <i class="form-error"></i>
+          <span>Incorrect email</span>
+        </div>
+      </div>
+
+      <div class="form-control">
+        <label for="name">Name*</label>
+        <input type="text" formControlName="name" placeholder="Enter your name" #userName required>
+        <div *ngIf="signUpForm.controls.name.invalid && isSubmitted" class="form-control-validators">
+          <i class="form-error"></i>
+          <span>Please enter your name</span>
+        </div>
+      </div>
+
+      <div class="form-control">
+        <label for="password">Password*</label>
+        <input type="password" formControlName="password" placeholder="Enter password" #userPassword required>
+        <div *ngIf="signUpForm.controls.password.invalid && isSubmitted" class="form-control-validators">
+          <i class="form-error"></i>
+          <span>Password should include at least 6 characters and contain one digit and one capital letter</span>
+        </div>
+      </div>
+
+      <div class="form-control">
+        <label for="password2">Confirm Password*</label>
+        <input type="password" formControlName="password2" placeholder="Confirm password" #userPassword2 required>
+        <div *ngIf="signUpForm.controls.password.invalid && signUpForm.controls.password.value !== signUpForm.controls.password2.value || !signUpForm.controls.password2" class="form-control-validators">
+          <i class="form-error"></i>
+          <span>Password dont match</span>
+        </div>
+      </div>
+
+      <div class="form-check">
+        <label class="control control-checkbox">
+          I agree to Proflourish
+          <a class="blue-a underline">Terms</a>
+          and
+          <a class="blue-a underline">Privacy Policy</a>
+          *
+          <input type="checkbox" formControlName="privacy" id="rememberMe" #userPrivacy required />
+          <div class="control_indicator"></div>
+        </label>
+      </div>
+      <div *ngIf="signUpForm.controls.privacy.invalid && isSubmitted" class="form-control-validators">
+        <i class="form-error"></i>
+        <span>Please agree with terms and privacy policy</span>
+      </div>
+
+      <div class="form-check">
+        <label class="control control-checkbox">
+          I agree to recieve Proflourish news and updates
+          <input type="checkbox" formControlName="news" id="news" />
+          <div class="control_indicator"></div>
+        </label>
+      </div>
+
+      <button type="submit" class="red-btn">Login</button>
+    </form>
+    <div class="oAuth">
+      <p class="smaller-p">Or sign up with:</p>
+      <div>
+        <div><img src="/assets/icons/oAuth-google.svg" alt=""> Google</div>
+        <div><img src="/assets/icons/oAuth-facebook.svg" alt="">Facebook</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="for-employee" [ngClass]="{'visible': userType == 'employee'}">
+    <p><span>Included $00 bonus:</span> no credit card required </p>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<main class="vsa">
+  <app-welcome-banner [wcBanner]='oprDummy.WcBanner'></app-welcome-banner>
+  <app-browse-jobs [jobList]="oprDummy.JobList"></app-browse-jobs>
+  <app-multistep-info [mlsInfo]='oprDummy.mlsInfo'></app-multistep-info>
+  <app-arrow-banner [arrBanner]='oprDummy.arrBanner'></app-arrow-banner>
+  <app-skill-set [skillSet]='oprDummy.skillSet'></app-skill-set>
+  <app-arrow-banner [arrBanner]='oprDummy.arrBanner2'></app-arrow-banner>
+
+  <app-buss-list [bussList]='oprDummy.bussList'></app-buss-list>
+  <div class="marketing-table-container">
+    <div class="marketing-table">
+      <h3>What softwares and systems do these online entrepreneurs and CEOs use in their virtual businesses?</h3>
+
+      <p>
+        Having a starring role optimizing the systems of a 100% online business means you’re going to want to be familiar
+        with the tech tools and software platforms small online businesses use. Being tech savvy and adopting new
+        technologies quickly is essential, but being familiar with any of the following tools with give you extra points
+        when applying for remote Operations roles:
+      </p>
+
+      <div class="mTable">
+        <div class="mTable-caption">
+          <h5>
+            Software & Tech Online Entrepreneurs Use To Grow Their Business
+          </h5>
+        </div>
+        <div class="mTable-header">
+          <div class="mTable-header-row">
+            <div class="mTable-header-row-cell" *ngFor="let header of oprDummy.marketingTable.headers">
+              {{header}}
+
+            </div>
+          </div>
+        </div>
+        <div class="mTable-body">
+          <div class="mTable-body-row" *ngFor="let row of oprDummy.marketingTable.body">
+            <div class="mTable-body-row-cell" *ngFor="let cell of row">
+              <div>
+                <i *ngIf="cell.length"></i> <img src="{{cell}}">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <app-apply [apply]='oprDummy.apply'></app-apply>
+  <app-table [table]='oprDummy.table'></app-table>
+
+  <app-resources [res]='oprDummy.res'></app-resources>
+  <app-arrow-banner [arrBanner]='oprDummy.arrBanner4'></app-arrow-banner>
+  <app-interested></app-interested>
+</main>

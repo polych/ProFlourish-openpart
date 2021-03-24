@@ -1,0 +1,60 @@
+@import "/src/assets/scss/colors";
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    margin-bottom: 20px;
+  }
+  &-container {
+    padding: 40px 30px;
+    box-shadow: 0px 4px 30px rgba(140, 157, 202, 0.15);
+
+    width: 530px;
+    background-color: $white;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+  }
+}
+.oAuth {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  > div {
+    margin-top: 20px;
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+    > div {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      width: 230px;
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      color: #4285f4;
+      border: 1px solid #4285f4;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      img {
+        margin-right: 6px;
+        width: 20px;
+        height: 20px;
+      }
+      &:hover {
+        color: $black;
+        border-color: $black;
+      }
+    }
+  }
+}

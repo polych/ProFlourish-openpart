@@ -1,0 +1,111 @@
+<div class="modal">
+  <div class="applyModal-modal">
+    <div class="modal-tabs">
+      <div class="modal-tabs-tab" [ngClass]="{'active': tabActive}" (click)='changeTab()'>ProFlourish Resume</div>
+      <div class="modal-tabs-tab" [ngClass]="{'active': !tabActive}" (click)='changeTab()'>Upload Resume</div>
+    </div>
+    <div class="applyModal-modal-body">
+      <div *ngIf="tabActive;else upload" class="internal">
+        <div class='internal-greeting'>
+          <h5>Andrew Reylonds</h5> <a class="blue-a">My resume →</a>
+
+        </div>
+        <label class="control control-checkbox">
+          Introduce Yourself
+          <input type="checkbox" #introduce />
+          <div class="control_indicator"></div>
+        </label>
+
+        <div *ngIf="introduce.checked" class="introduce">
+          <p class="smaller-p smaller-p-gray">
+            Personal Bio: Think of this as a short, sweet cover letter. It is your opportunity to make a great first
+            impression to the hiring manager or CEO. This is optional, but highly recommended.
+          </p>
+          <div class="editor">
+            <ngx-editor-menu [editor]="editor" [toolbar]="toolbar">
+            </ngx-editor-menu>
+            <ngx-editor [editor]="editor" formControlName="editorContent">
+            </ngx-editor>
+          </div>
+          <p><strong>Your Supporting Documents</strong></p>
+          <p class="smaller-p smaller-p-gray">
+            We recommend you include links to supporting documents to stand out! Examples include links to: a 60-second
+            intro video outlining why you’re the best fit for the role; video walkthrough showcasing your knowledge of a
+            relevant tech program; your design portfolio; your social media profile(s), etc.
+          </p>
+          <div class="form-control">
+            <label for="portfolioLink">Portfolio (optional)</label>
+            <input type="text" id="portfolioLink" formControlName="portfolioLink"
+              placeholder='Link to Portfolio (optional)'>
+          </div>
+          <div class="form-control">
+            <label for="socMediaLink">Social media (optional)</label>
+            <input type="text" id="socMediaLink" formControlName="socMediaLink"
+              placeholder='Link to Social Media Profiles'>
+          </div>
+          <div class="form-control" *ngFor="let links of links().controls; let i=index">
+            <label for="links">Link (optional) </label>
+            <div class="form-control-input">
+              <input type="text" id="links" formControlName="links" placeholder='Link to Social Media Profiles'>
+              <div class="delete-link" (click)='removeLinks(i)'><i class="trash-icon"></i><strong>Delete</strong></div>
+            </div>
+          </div>
+          <p class="blue-a" (click)="addLinks()">+ Add more Social links</p>
+        </div>
+      </div>
+      <ng-template #upload class="external">
+        <div class='external-header'>
+          <div class="external-name">
+            <h5>Andrew Reylonds, <span>andrewr@gmail.com</span></h5>
+            <a class="blue-a">Edit</a>
+          </div>
+          <div class="external-files">
+            <div class="external-files-buttons">
+              <button class="red-btn" (click)="openFile()">
+                Upload resume
+                <input type="file" id="uploadResume" style='display: none;'>
+              </button>
+              Or
+              <input type="text" placeholder="Link to your resume">
+            </div>
+            <span *ngIf="false">.
+              <div class="delete-link" ><i class="trash-icon"></i><strong>Delete</strong></div>
+
+            </span>
+          </div>
+          <label class="control control-checkbox">
+            Introduce Yourself
+            <input type="checkbox" #introduce />
+            <div class="control_indicator"></div>
+          </label>
+
+          <div *ngIf="introduce.checked" class="introduce">
+            <p class="smaller-p smaller-p-gray">
+              Personal Bio: Think of this as a short, sweet cover letter. It is your opportunity to make a great first
+              impression to the hiring manager or CEO. This is optional, but highly recommended.
+            </p>
+            <div class="editor">
+              <ngx-editor-menu [editor]="editor" [toolbar]="toolbar">
+              </ngx-editor-menu>
+              <ngx-editor [editor]="editor" formControlName="editorContent">
+              </ngx-editor>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+      <hr>
+
+      <label class="control control-checkbox">
+        Send me email alerts for similar jobs!
+        <input type="checkbox" #introduce />
+        <div class="control_indicator"></div>
+      </label>
+      <div class="buttons">
+        <button class="border-btn" (click)="modalServ.closeModal()">Cancel</button>
+        <button class="red-btn" (click)="nextModal()">Apply</button>
+
+      </div>
+    </div>
+  </div>
+
+</div>

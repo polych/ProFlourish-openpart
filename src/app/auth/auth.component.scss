@@ -1,0 +1,33 @@
+@import '/src/assets/scss/colors';
+
+.auth {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $gray;
+  h4 {
+    cursor: pointer;
+  }
+  &-header {
+    width: 1110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  &-body {
+    width: 1110px;
+    min-height: 700px;
+    height: 100%;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+}
+.auth button.active {
+  display: none;
+}

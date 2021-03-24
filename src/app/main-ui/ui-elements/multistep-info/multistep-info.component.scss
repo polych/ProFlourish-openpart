@@ -1,0 +1,171 @@
+@import "/src/assets/scss/colors";
+
+.mls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  > h3 {
+    text-align: center;
+    width: 510px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  &-heading {
+    position: relative;
+    padding: 100px 0;
+    background-color: $gray;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    > div {
+      width: 1110px;
+      padding: 0 100px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &-text {
+      margin-right: 20px;
+      h3 {
+        width: 510px;
+      }
+      pre {
+        width: 510px;
+        margin-top: 20px;
+      }
+    }
+    &-img {
+      width: inherit;
+      height: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  p,
+  pre {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  >p {
+    margin: 100px;
+  }
+
+  .row-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 160px;
+    width: 100%;
+    p {
+      width: 750px;
+      margin-bottom: 30px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 30px;
+      margin-top: 20px;
+    }
+  }
+  &-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 730px;
+    padding: 65px 0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    img {
+      width: min-content;
+      width: -webkit-min-content;
+      width: -moz-min-content;
+    }
+    div {
+      width: 100%;
+      min-width: 66%;
+      flex-shrink: 0;
+    }
+    pre {
+      margin-top: 20px;
+      white-space: pre-wrap; /* Since CSS 2.1 */
+      white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+      white-space: -pre-wrap; /* Opera 4-6 */
+      white-space: -o-pre-wrap; /* Opera 7 */
+      word-wrap: break-word;
+    }
+    &-subt {
+      margin-top: 20px;
+    }
+  }
+}
+.mls-vsa {
+  width: 100%;
+  padding: 50px 100px 70px;
+  align-items: center;
+  img {
+    width: 277px;
+    height: 225px;
+  }
+}
+.descColor {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #010101 !important;
+}
+.ps {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  width: 730px;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  color: $gray-color;
+}
+.mls > .row-container {
+  &:nth-child(odd) {
+    background-color: $white;
+    .title::before {
+      position: absolute;
+      content: attr(data-row-index);
+      color: rgba($color: $black, $alpha: 0.1);
+      font-weight: 600;
+      font-size: 144px;
+      line-height: 173px;
+      left: 0px;
+      top: 0px;
+      transform: translate(-60%, 0);
+      -webkit-transform: translate(-60%, 0);
+      -moz-transform: translate(-60%, 0);
+      -ms-transform: translate(-60%, 0);
+      -o-transform: translate(-60%, 0);
+    }
+  }
+  &:nth-child(even) {
+    background-color: $blue;
+    * {
+      color: rgba($color: $white, $alpha: 0.7);
+    }
+    .title::after {
+      position: absolute;
+      content: attr(data-row-index);
+      color: rgba($color: $white, $alpha: 0.1);
+      font-weight: 600;
+      font-size: 144px;
+      line-height: 173px;
+      right: 0px;
+      top: 0px;
+      transform: translateX(50%);
+      -webkit-transform: translateX(50%);
+      -moz-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+      -o-transform: translateX(50%);
+    }
+  }
+}

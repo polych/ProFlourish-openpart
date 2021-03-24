@@ -1,0 +1,119 @@
+@import "/src/assets/scss/colors";
+
+.jobs {
+  padding: 100px 165px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  > div {
+    width: 1110px;
+  }
+  h3 {
+    width: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    margin-bottom: 30px;
+  }
+  &-block {
+    display: flex;
+    flex-direction: column;
+    > h5 {
+      align-self: flex-end;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+  &-list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.job-block {
+  display: flex;
+  border-radius: 10px;
+  border: 1px solid $red-light;
+  margin-top: 10px;
+
+  &-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    height: 90px;
+    width: 140px;
+    background-color: $white;
+    margin: 5px;
+  }
+  &-description {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .description-header {
+    display: flex;
+    justify-content: space-between;
+    > div {
+      display: flex;
+    }
+    i {
+      margin-right: 10px;
+      height: 24px;
+      width: 24px;
+      background-color: $white;
+      border-radius: 4px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+    }
+    h5 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .job-badge {
+      display: flex;
+      align-items: flex-start;
+      padding: 5px 20px;
+      border-radius: 10px;
+      background-color: $white;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      margin-left: 20px;
+    }
+  }
+  .description-info {
+    display: flex;
+    div {
+      display: flex;
+      align-items: center;
+      &:nth-child(2) {
+        margin: 0 40px;
+      }
+      i {
+        height: 20px;
+        width: 20px;
+        margin-right: 10px;
+      }
+    }
+
+  }
+}
+.job-block-first {
+  background-color: $black;
+  border: 1px solid $black;
+  *{
+    color: $white;
+  }
+  .job-badge {
+    color: $black;
+  }
+}

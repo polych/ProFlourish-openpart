@@ -1,0 +1,53 @@
+@import "/src/assets/scss/colors";
+
+.arr-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.arr-banner {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 1110px;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 40px;
+    h3 {
+      width: 565px;
+      text-align: center;
+      color: $white;
+    }
+  }
+  button {
+    margin-left: 30px;
+    &.red-btn:hover{
+      background-color: $white;
+      color: $red;
+    }
+  }
+}
+
+.arr-vector {
+  display: block;
+  height: 100px;
+  width: 116px;
+  background: url("/assets/vectors/arr-vector.svg") no-repeat;
+}
+.arr-btm-vector {
+  background: url("/assets/vectors/arr-btm-vector.svg") no-repeat left 246px bottom 20px;
+}
+.black {
+  background-color: $black;
+}
+.red {
+  background-color: $red;
+}

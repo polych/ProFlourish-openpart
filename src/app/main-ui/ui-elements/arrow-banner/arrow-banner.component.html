@@ -1,0 +1,25 @@
+<div class="arr-container " *ngIf="arrBanner.color;else red">
+  <div class="arr-banner" [ngStyle]="{'margin-top':arrBanner.marginTop,'margin-bottom':arrBanner.marginBottom}">
+    <div class="black">
+      <h3 [ngStyle]="{'width':arrBanner.textWidth}">{{arrBanner.title}}</h3>
+      <button [routerLink]="['/search']" class="red-btn"
+        *ngIf="arrBanner.buttonText == 'Browse Jobs'">{{arrBanner.buttonText}}</button>
+      <button [routerLink]="['/client', {outlets: {client: 'create-job'}}]" class="red-btn"
+        *ngIf="arrBanner.buttonText == 'Post Job' && 'Post Your Job'">{{arrBanner.buttonText}}</button>
+    </div>
+  </div>
+</div>
+
+<ng-template #red>
+  <div class="arr-container ">
+    <div class="arr-banner" [ngStyle]="{'margin-top':arrBanner.marginTop,'margin-bottom':arrBanner.marginBottom}">
+      <div class="red">
+        <h3  [ngStyle]="{'width':arrBanner.textWidth}">{{arrBanner.title}}</h3>
+        <button [routerLink]="['/search']" class="white-btn"
+          *ngIf="arrBanner.buttonText == 'Browse Jobs'">{{arrBanner.buttonText}}</button>
+        <button [routerLink]="['/client', {outlets: {client: 'create-job'}}]" class="white-btn"
+          *ngIf="arrBanner.buttonText == 'Post Job'">{{arrBanner.buttonText}}</button>
+      </div>
+    </div>
+  </div>
+</ng-template>

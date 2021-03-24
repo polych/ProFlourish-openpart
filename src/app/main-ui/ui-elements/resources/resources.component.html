@@ -1,0 +1,15 @@
+<div class="res-container" [ngStyle]="{'background-color': res.bgColor}">
+  <div class="res" [ngStyle]="{'padding': res.padding, 'flex-direction': res.direction}">
+    <div>
+      <h3>{{res.title}}</h3>
+      <pre>{{res.desc}}</pre>
+      <p >
+        Stick with us! Head over to our <a [routerLink]="['/resources', {outlets: {marketingPages: 'for-seekers'}}]"
+          class="blue-a">Resources for Virtual Job Seekers</a> where we share our
+        top tips to stand out in your
+        virtual job search and land a remote job faster.
+      </p>
+    </div>
+    <img src="{{res.img}}" alt="">
+  </div>
+</div>

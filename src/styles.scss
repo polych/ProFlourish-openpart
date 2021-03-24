@@ -1,0 +1,26 @@
+@import "assets/scss/global.scss";
+
+@font-face {
+  font-family: "Recoleta";
+  src: local("Recoleta"), url(./assets/fonts/Recoleta-SemiBold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "TT Commons";
+  src: local("TT Commons"), url(./assets/fonts/TT-Commons-Medium.otf) format("truetype");
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+  }
+}
+
+body.apply-modal-open {
+  overflow: hidden;
+}
+body {
+  position: relative;
+}

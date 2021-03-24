@@ -1,0 +1,94 @@
+<div class="test-block">
+  <app-header></app-header>
+  <div class="article-page">
+
+
+    <div class="article-page-header">
+
+      <div class="back">
+        <a href="">
+          <i class="back-arrow"></i>
+          Back
+        </a>
+        <div>
+          <a href=""><u>Home</u></a>→ <a href=""><u>Resourses for Job Seekers</u></a> → <a href=""><u>How to prepare for
+              my new hire</u></a> →Resourses for Job Seekers
+        </div>
+      </div>
+
+      <div class="page-header">
+
+        <div>
+          <h4>{{artDummy.header.page}}</h4>
+          <h1>{{artDummy.header.title}}</h1>
+
+          <div class="article-desc">
+            <div>{{artDummy.header.thread}}</div>
+            <div>{{artDummy.header.author}}</div>
+            <div>{{artDummy.header.time}}</div>
+          </div>
+
+        </div>
+
+        <img src="{{artDummy.header.img}}" alt="">
+      </div>
+
+    </div>
+    <div class="article-page-body">
+      <div class="article">
+        <div class="article-header">
+          <div class="article-header-done" id="done">
+          </div>
+        </div>
+        <pre class="article-body" id="articleText" (scroll)='scroll()'>
+          {{artDummy.article.text}}
+
+        </pre>
+        <div class="article-footer">
+          <a href="">
+            <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 1L1 4L4 7" stroke="#010101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M16 4H2" stroke="#010101" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Previous Article (title)
+          </a>
+          <a href="">
+            Next Article (title)
+            <svg width="17" height="8" viewBox="0 0 17 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 1L16 4L13 7" stroke="#EC5B60" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M1 4H15" stroke="#EC5B60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+        <div class="share">
+          <small>Share</small>
+          <a class="share-fb"></a>
+          <a class="share-insta"></a>
+          <a class="share-ptr"></a>
+        </div>
+      </div>
+
+      <div class="article-page-body-sidebar">
+        <div class="most-popular">
+          <h5>Most popular articles</h5>
+          <div *ngFor="let article of artDummy.articles | slice:0:4">
+            <p class="smaller-p smaller-p-gray">{{article.part}}</p>
+            <h5>{{article.title}}</h5>
+          </div>
+        </div>
+        <div class="subscribe">
+          <h5>Subscribe for the latest!</h5>
+          <div>
+            <label for="email">Email*</label>
+            <input type="email" name="" id="" placeholder="Enter your email">
+          </div>
+          <button class="red-btn">Sign Me Up!</button>
+        </div>
+      </div>
+    </div>
+    <app-carousel [cData]='artDummy.articles'></app-carousel>
+  </div>
+
+  <app-footer></app-footer>
+</div>

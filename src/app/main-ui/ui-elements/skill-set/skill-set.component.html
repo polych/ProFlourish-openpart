@@ -1,0 +1,21 @@
+<div class="skillset">
+  <div>
+    <div class="skillset-header">
+      <div class="skillset-header-text">
+        <h3>{{skillSet.title}}</h3>
+        <pre>{{skillSet.desc}}</pre>
+        <h5>{{skillSet.subTitle}}</h5>
+      </div>
+      <div class="skillset-header-img">
+        <img src="{{skillSet.img}}" alt="">
+      </div>
+    </div>
+    <div class="skillset-skills" >
+      <div class="skillset-skill" *ngFor="let skill of skillSet.skills">
+        <h2>{{skill.number}}</h2>
+        <p>{{skill.text}}</p>
+      </div>
+    </div>
+    <p class="ps" *ngIf="skillSet.ps">{{skillSet.ps}}</p>
+  </div>
+</div>

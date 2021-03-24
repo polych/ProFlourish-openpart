@@ -1,0 +1,18 @@
+<div class="buss" [ngClass]="{'white': bussList.color}">
+  <div>
+    <div class="buss-header">
+      <div>
+        <h3>{{bussList.title}}</h3>
+        <p class="gray">{{bussList.desc}}</p>
+        <h5 *ngIf="bussList.subTitle">{{bussList.subTitle}}</h5>
+      </div>
+      <img src="{{bussList.img}}" alt="">
+    </div>
+    <div class="buss-list" >
+      <div class="buss-item" *ngFor="let buss of bussList.skills">
+        <i class="buss-list-icon"></i>
+        <p>{{buss.text}}</p>
+      </div>
+    </div>
+  </div>
+</div>

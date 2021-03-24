@@ -1,0 +1,81 @@
+<div class="cookie">
+  <p class="fs-14">
+    Vulputate ac quis ultrices nulla lobortis diam ultricies quisque vel. Click <a href=""><b>Here</b></a> to learn
+    more.
+    <a [routerLink]="['/client', {outlets: {client:'dashboard'}}]">client </a>
+    <a [routerLink]="['/candidate', {outlets: {candidate:'dashboard'}}]">candidate</a>
+  </p>
+</div>
+<header>
+  <div>
+    <h4 [routerLink]="['']">ProFlourish</h4>
+    <div>
+      <nav>
+        <div class="drop-down drop-down-box1">
+          <div class="drop-down-btn">
+            <p class="gray fs-16">Virtual Dream Jobs</p> <i class="arw-down-icon"></i>
+          </div>
+          <div class="drop-down-box box1-dropdown">
+            <a [routerLink]="['/dream-jobs', {outlets: {marketingPages:'administration'}}]" class="nav-a">Virtual
+              Assistant & Administrative</a>
+            <a [routerLink]="['/dream-jobs', {outlets: {marketingPages:'client-success'}}]" class="nav-a">Client Success
+              & Program Delivery</a>
+            <a [routerLink]="['/dream-jobs', {outlets: {marketingPages:'marketing'}}]" class="nav-a">Marketing & Graphic
+              Design</a>
+            <a [routerLink]="['/dream-jobs', {outlets: {marketingPages:'sales'}}]" class="nav-a">Sales</a>
+            <a [routerLink]="['/dream-jobs', {outlets: {marketingPages:'elearning'}}]" class="nav-a">Education &
+              Instructional <br> Design & eLearning</a>
+            <a [routerLink]="['/dream-jobs', {outlets: {marketingPages:'leadership'}}]" class="nav-a">Leadership</a>
+            <a [routerLink]="['/dream-jobs', {outlets: {marketingPages:'operations'}}]" class="nav-a">Operations</a>
+          </div>
+        </div>
+
+        <div class="drop-down drop-down-box2">
+          <div class="drop-down-btn">
+            <p class="gray fs-16">Hire Your Dream Team</p> <i class="arw-down-icon"></i>
+          </div>
+          <div class="drop-down-box box2-dropdown">
+            <a [routerLink]="['/client', {outlets: {client:'create-job'}}]" class="nav-a">Post a Job</a>
+            <a [routerLink]="['/dream-team', {outlets: {marketingPages:'done-for-hiring'}}]" class="nav-a">Done-For-You
+              Hiring</a>
+          </div>
+        </div>
+
+        <div class="drop-down drop-down-box3">
+          <div class="drop-down-btn">
+            <p class="gray fs-16">Resources</p> <i class="arw-down-icon"></i>
+          </div>
+          <div class="drop-down-box box3-dropdown">
+            <a [routerLink]="['/resources', {outlets: {marketingPages:'for-seekers'}}]" class="nav-a">For Job
+              Seekers</a>
+            <a [routerLink]="['/resources', {outlets: {marketingPages:'for-employers'}}]" class="nav-a">For
+              Employers</a>
+          </div>
+        </div>
+        <p class="fs-16 gray" *ngIf="!userRole" [routerLink]="['/about']">About Us</p>
+
+        <a  *ngIf="!userRole" [routerLink]="['/auth', {outlets: {auth:'login'}}]">Log in</a>
+
+        <div *ngIf="userRole === 'candidate'" class="drop-down drop-down-box3">
+          <div class="drop-down-btn"><strong>Hi, {{user.firstName}}</strong><i class="arw-down-icon"></i></div>
+          <div class="drop-down-box box3-dropdown">
+            <a [routerLink]="['/candidate', {outlets: {candidate:'dashboard'}}]" class="nav-a">My Dashboard</a>
+
+            <a [routerLink]="['/candidate', {outlets: {candidate:'subscriptions'}}]" class="nav-a">Your Job Alerts
+              Settings</a>
+            <a class="nav-a" (click)="auth.logout()">Log Out</a>
+          </div>
+        </div>
+        <div *ngIf="userRole === 'client'" class="drop-down drop-down-box3">
+          <div class="drop-down-btn"><strong>Hi, {{user.firstName}}</strong><i class="arw-down-icon"></i></div>
+          <div class="drop-down-box box3-dropdown">
+            <a [routerLink]="['/client', {outlets: {client:'dashboard'}}]" class="nav-a">My Dashboard</a>
+            <a class="nav-a" (click)="auth.logout()">Log Out</a>
+          </div>
+        </div>
+      </nav>
+      <button class="red-btn" [routerLink]="['/client', {outlets: {client:'create-job'}}]">Post a Job</button>
+    </div>
+  </div>
+
+</header>

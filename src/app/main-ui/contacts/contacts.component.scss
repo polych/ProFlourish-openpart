@@ -1,0 +1,100 @@
+@import "/src/assets/scss/colors";
+
+.contacts-page {
+  width: 100%;
+  padding: 20px 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $gray;
+}
+
+.contacts {
+  width: 1110px;
+}
+.back {
+  display: flex;
+  flex-direction: column;
+  > div,
+  > a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  > a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    &:hover {
+      color: $dark-gray-color;
+    }
+    i {
+      margin-right: 10px;
+    }
+  }
+  > div, div>a {
+    font-size: 10px;
+    line-height: 11px;
+  }
+  >div {
+    margin-left: 26px;
+  }
+}
+.contact {
+  margin: 20px 26px;
+  width: 450px;
+  h1 {
+    margin-bottom: 20px;
+  }
+}
+.contacts {
+  &-block {
+    width: 1110px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 825px;
+    padding: 40px 30px;
+    background-color: $white;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    h4 {
+      width: 480px;
+    }
+    >div {
+      display: flex;
+      flex-direction: column;
+      margin: 20px 0 10px;
+      width: 420px;
+      label {
+        margin-left: 20px;
+      }
+      textarea {
+        height: 160px;
+      }
+    }
+    >button {
+      margin-top: 10px;
+      width: fit-content;
+      width: -moz-fit-content;
+      width: -webkit-fit-content;
+    }
+  }
+  &-refs {
+    display: flex;
+    flex-direction: column;
+    width: 255px;
+    > * {
+      margin-bottom: 20px;
+    }
+  }
+}

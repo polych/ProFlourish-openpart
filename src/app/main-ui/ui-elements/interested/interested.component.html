@@ -1,0 +1,17 @@
+<div class="intr">
+  <div>
+    <div [ngClass]="{'bigger':buttonsArr.length>6}">
+      <h4>You might also be interested in...</h4>
+      <div>
+        <a *ngFor="let i of buttonsArr" [routerLink]="['/dream-jobs', {outlets: {marketingPages:i.url}}]" class="intr-button">
+          <div class="img-bg">
+            <img src="{{i.img}}" alt="">
+          </div>
+          <p>{{i.title}}</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+</div>

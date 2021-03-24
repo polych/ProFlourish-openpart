@@ -1,0 +1,79 @@
+<app-header></app-header>
+
+<main class="homepage">
+  <app-welcome-banner [wcBanner]="homeDummy.WcBanner"></app-welcome-banner>
+  <app-browse-jobs [jobList]="homeDummy.JobList"></app-browse-jobs>
+  <div class="announcement-banner">
+    <h2>Announcement Banner</h2>
+    <p class="smaller-p">Technical Project Manager Seeking a Dynamic, Agile Project Manager! Do you enjoy working with
+      cutting edge
+      technology to solve tough... Agile Project Manager! Do you enjoy working with cutting edge.</p>
+  </div>
+  <div class="hire-block">
+    <div class="hire-block-desc">
+      <h3>Find Your Perfect Fit Hire</h3>
+      <h5>Hiring your next dream team member just got easier!</h5>
+      <p class="smaller-p smaller-p-gray">Our one-of-a-kind custom platform connects entrepreneurs, online course
+        creators and coaches like you with the
+        full-time, part-time, or contract team members you need to scale your business. <br> <br>
+
+        We know how your business works and the exact next hire you need to unlock your next level of growth. Not to
+        mention, it’s time to ditch searching for talent via Facebook Groups, your email list, social media, word of
+        mouth, or saturated job sites… <br><br>
+
+        Leverage our specialized audience and database of virtual job seekers ready to make a BIG impact in your growing
+        online business!</p>
+      <div>
+        <button class="red-btn" [routerLink]="['/client', {outlets: {client: 'create-job'}}]">Post Your Job</button>
+        <button class="border-btn" [routerLink]="['/dream-team', {outlets: {marketingPages: 'done-for-hiring'}}]">Done
+          For You Hiring</button>
+      </div>
+    </div>
+    <img src="/assets/images/hire-block.svg" alt="">
+  </div>
+  <app-arrow-banner [arrBanner]='homeDummy.arrBanner'></app-arrow-banner>
+  <div class="resources-emp">
+    <div>
+      <img src="/assets/images/hp-res-emp.svg" alt="">
+      <div>
+        <h5>Resources for Employers</h5>
+        <h3>Find everything you need to hire and grow your flourishing virtual team - all in one place! </h3>
+        <p class="gray fs-16">We've got you covered with resources to help you know who to hire, when to hire, and how to build the team
+          that will help you reach the next level of growth in your business. </p>
+        <button class="border-btn" [routerLink]="['/resources', {outlets: {marketingPages: 'for-employers'}}]">Learn
+          more →</button>
+      </div>
+    </div>
+  </div>
+  <div class="resources-seek">
+    <div class="resources-block">
+      <div>
+        <h5>Resources for Job Seekers</h5>
+        <h3>Ramp up your virtual job search with everything you need to get hired!</h3>
+        <p class="gray fs-16" >We’ve created resources to help you find your dream job. We've got you covered with the latest strategies
+          to help you stand out and land the virtual job of your dreams! </p>
+        <button class="border-btn" [routerLink]="['/resources', {outlets: {marketingPages: 'for-seekers'}}]">Learn
+          more
+          →</button>
+      </div>
+      <img src="/assets/images/hp-res-seek.svg" alt="">
+
+    </div>
+    <div class="seek-banner">
+      <div>
+        <h3>Post your job for $199 today! </h3>
+        <button class="white-btn" [routerLink]="['/client', {outlets: {client: 'create-job'}}]">Post a Job</button>
+      </div>
+    </div>
+  </div>
+  <div class="subscribe">
+    <div>
+      <h3>Get job alert emails straight to your inbox and be the first to know about new virtual job opportunities!</h3>
+      <div class="subscribe-btn">
+        <input type="text" placeholder="Enter your email address">
+        <button class="red-btn">Sign Me Up!</button>
+      </div>
+    </div>
+  </div>
+</main>
+<app-footer></app-footer>

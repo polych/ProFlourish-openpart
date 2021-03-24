@@ -1,0 +1,131 @@
+@import "colors.scss";
+
+body {
+  color: $black;
+}
+
+p {
+  font-family: TT Commons;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  color: $black;
+  &.fs-14 {
+    font-size: 14px;
+    line-height: 15px;
+  }
+  &.fs-16 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  &.gray {
+    color: rgba($color: $black, $alpha: 0.7);
+  }
+}
+.smaller-p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  &-gray {
+    color: $black;
+  }
+}
+a {
+  font-family: TT Commons;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: none;
+  color: $black;
+}
+a:hover {
+  color: $red;
+}
+.nav-a {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+}
+.blue-a {
+  color: $dark-blue;
+  &.underline {
+    text-decoration: underline;
+  }
+}
+h1 {
+  font-family: Recoleta;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 70px;
+  letter-spacing: -0.03em;
+}
+h2 {
+  font-family: Recoleta;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 57px;
+  letter-spacing: -0.03em;
+}
+h3 {
+  font-family: Recoleta;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: -0.03em;
+}
+h4 {
+  font-family: TT Commons;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 34px;
+  letter-spacing: -0.03em;
+}
+h5 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  color: $black;
+}
+strong,
+b {
+  font-weight: bolder;
+}
+pre {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  color: $gray-color;
+  white-space: pre-wrap; /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word;
+}
+input {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: $black;
+}
+input::placeholder {
+  color: $gray-color;
+}
+label {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  color: $black;
+}

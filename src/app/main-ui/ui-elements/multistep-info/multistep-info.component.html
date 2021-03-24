@@ -1,0 +1,34 @@
+<div class="mls">
+  <div class="mls-heading" *ngIf="mlsInfo.title">
+    <div>
+      <div class="mls-heading-text">
+        <h3>{{mlsInfo.title}} </h3>
+        <pre>{{mlsInfo.desc}} </pre>
+      </div>
+      <div class="mls-heading-img">
+        <img src="{{mlsInfo.img}}" alt="">
+      </div>
+    </div>
+
+  </div>
+  <span *ngIf="!mlsInfo.title && mlsInfo.listTitle"></span>
+  <h3 *ngIf="mlsInfo.listTitle" [ngStyle]="{'width':mlsInfo.listTitleWidth}">{{mlsInfo.listTitle}}</h3>
+
+  <div class="row-container" *ngFor="let info of mlsInfo.list; let i = index">
+    <div class="mls-row">
+      <div>
+        <h5 class="title" [attr.data-row-index]="'0'+(i+1)">{{info.title}}</h5>
+        <pre>{{info.desc}}</pre>
+        <h5 *ngIf="info.subtitle" class="mls-row-subt">{{info.subtitle}}</h5>
+        <div *ngIf="(i + 1) == mlsInfo.list.length">
+          <p class="ps" *ngIf="mlsInfo.ps">{{mlsInfo.ps}}</p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <p [ngStyle]="{'width': mlsInfo.decsWidth}" *ngIf="mlsInfo.listdisc">
+    {{mlsInfo.listdisc}}</p>
+
+</div>

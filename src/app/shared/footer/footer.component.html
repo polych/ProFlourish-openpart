@@ -1,0 +1,76 @@
+<footer *ngIf="marketing(); else dark">
+  <div>
+    <div class="footer-nav">
+
+      <div class="footer-heading">
+        <h4 [routerLink]="['/home']">
+          ProFlourish
+        </h4>
+        <p class="smaller-p">
+          A one-of-a-kind virtual jobs platform for job seekers; and the powerful entrepreneurial teams waiting to hire
+          them.
+        </p>
+        <div class="footer-social">
+          <a href=""><i class="fb-icon"></i></a>
+          <a href=""><i class="insta-icon"></i></a>
+          <a href=""><i class="pt-icon"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-nav-column">
+        <h5>For Job Seekers</h5>
+        <a href="">Find Your Dream Job</a>
+        <a href="">Create Your Resume</a>
+        <a href="">Stand Out & Get Hired</a>
+      </div>
+
+      <div class="footer-nav-column">
+        <h5>For Employers</h5>
+        <a href="">Post Your Job</a>
+        <a href="">Grow Your Dream Team</a>
+        <a [routerLink]="['/dream-team', {outlets: {marketingPages:'done-for-hiring'}}]">Done-For-You Hiring</a>
+      </div>
+
+      <div class="footer-nav-column">
+        <h5>About ProFlourish</h5>
+        <a [routerLink]="['/about']">Our Story & Values </a>
+        <a href="">Why Use ProFlourish</a>
+        <a [routerLink]="['/contacts']">Contact Us</a>
+      </div>
+
+    </div>
+
+    <div class="footer-banner">
+      <p class="smaller-p">
+        At <b>ProFlourish</b> we believe the most effective hiring practices and virtual teams embrace diversity, equity
+        and
+        inclusion as core values; <b>we strongly recommend yours do to!</b>
+      </p>
+    </div>
+
+    <hr>
+
+    <div class="footer-cr">
+      <p>© 2020 Proflourish</p>
+      <div>
+        <a href="">Help & Support</a>
+        <a href="">Terms & Conditions</a>
+        <a [routerLink]="['/privacy']">Privacy Policy</a>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+<ng-template #dark>
+  <footer class='footer-dark'>
+    <div class="footer-cr">
+      <p>© 2020 Proflourish</p>
+      <div>
+        <a href="">Help & Support</a>
+        <a href="">Terms & Conditions</a>
+        <a [routerLink]="['/privacy']">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+</ng-template>

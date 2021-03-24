@@ -1,0 +1,14 @@
+<div class="auth">
+  <div class="auth-header">
+    <h4 [routerLink]="['']">ProFlourish</h4>
+    <button class="red-btn" [routerLink]="['/auth',{outlets: {auth:'sign-up'}}]" *ngIf="getRoute()" >
+      Sign up
+    </button>
+    <button class="red-btn" [routerLink]="['/auth',{outlets: {auth:'login'}}]" *ngIf="!getRoute()">
+      Login
+    </button>
+  </div>
+  <div class="auth-body">
+    <router-outlet name="auth"></router-outlet>
+  </div>
+</div>

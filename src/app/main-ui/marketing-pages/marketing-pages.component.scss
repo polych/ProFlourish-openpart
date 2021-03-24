@@ -1,0 +1,14 @@
+.test-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  >* {
+    width: 100%;
+  }
+  .outlet >* {
+    width: 100vw;
+  }
+}
+
+

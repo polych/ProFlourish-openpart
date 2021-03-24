@@ -1,0 +1,74 @@
+@import "/src/assets/scss/colors";
+
+.skillset {
+  margin-top: 100px;
+  background-color: $gray;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  >div {
+    padding: 100px;
+    width: 1110px;
+  }
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 60px;
+    &-text {
+      position: relative;
+      width: 540px;
+      h3,
+      pre {
+        margin-bottom: 20px;
+      }
+      pre {
+        white-space: pre-wrap; /* Since CSS 2.1 */
+        white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+        white-space: -pre-wrap; /* Opera 4-6 */
+        white-space: -o-pre-wrap; /* Opera 7 */
+        word-wrap: break-word;
+      }
+    }
+    &-img {
+      width: 380px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &-skills {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &-skill {
+    width: 445px;
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    p {
+      margin-left: 30px;
+      font-size: 17px;
+      line-height: 20px;
+    }
+    &:hover {
+      color: $white;
+      background-color: $black;
+      p {
+        color: $white;
+      }
+    }
+  }
+}
+.ps {
+  width: 900px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 27px;
+  color: $gray-color;
+}

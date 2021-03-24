@@ -1,0 +1,30 @@
+<div class="forgot">
+  <h1>
+    Uh-oh, Locked Out?
+  </h1>
+  <div class="forgot-container" *ngIf="!grats;else succ">
+    <div class="form-control">
+      <label for="forgot">Enter the email associated with your account</label>
+      <input type="email" id="forgot" placeholder="Enter your email" #userEmail required autofocus>
+    </div>
+    <button (click)='onSubmit()' class="red-btn">Comfirm</button>
+    <a (click)='toLogin()'>
+      <i class="back-arrow"></i>
+      Back to login
+    </a>
+  </div>
+  <ng-template #succ>
+    <div class="forgot-container success" *ngIf="grats">
+      <img src="/assets/images/restore-success.svg" alt="">
+      <h1>Success!</h1>
+      <p>Your password reset instructions are on their way to your inbox!
+        If you don't receive an email in the next 10 minutes, go back and verify your email is correct. </p>
+      <a (click)='toLogin()'>
+        <i class="back-arrow"></i>
+        Back to login
+      </a>
+    </div>
+  </ng-template>
+</div>
+
+

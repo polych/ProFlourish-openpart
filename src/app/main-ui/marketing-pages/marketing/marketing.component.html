@@ -1,0 +1,54 @@
+<main class="marketing">
+  <app-welcome-banner [wcBanner]='MsmDummy.WcBanner'></app-welcome-banner>
+  <app-browse-jobs [jobList]="MsmDummy.JobList"></app-browse-jobs>
+  <app-multistep-info [mlsInfo]='MsmDummy.mlsInfo'></app-multistep-info>
+  <app-arrow-banner [arrBanner]='MsmDummy.arrBanner'></app-arrow-banner>
+  <app-skill-set [skillSet]='MsmDummy.skillSet'></app-skill-set>
+  <app-arrow-banner [arrBanner]='MsmDummy.arrBanner2'></app-arrow-banner>
+  <app-buss-list [bussList]='MsmDummy.bussList'></app-buss-list>
+  <div class="marketing-table-container">
+    <div class="marketing-table">
+      <h3>What marketing softwares do online entrepreneurs and CEOs use in their virtual businesses?</h3>
+
+      <p>
+        Having a starring role helping to market an online business means you’re going to want to be familiar with the
+        design & tech tools and software platforms businesses use. Knowing many of the following tools will be a
+        requirement and give you extra points when applying for remote Marketing roles:
+      </p>
+
+      <div class="mTable">
+        <div class="mTable-caption">
+          <h5>
+            Marketing Software Online Entrepreneurs & Businesses Use:
+          </h5>
+        </div>
+        <div class="mTable-header">
+          <div class="mTable-header-row">
+            <div class="mTable-header-row-cell" *ngFor="let header of MsmDummy.marketingTable.headers">
+              {{header}}
+
+            </div>
+          </div>
+        </div>
+        <div class="mTable-body">
+          <div class="mTable-body-row" *ngFor="let row of MsmDummy.marketingTable.body">
+            <div class="mTable-body-row-cell" *ngFor="let cell of row">
+              <div>
+                <i *ngIf="cell.length"></i> <img src="{{cell}}">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <app-apply [apply]='MsmDummy.apply'></app-apply>
+  <app-table [table]='MsmDummy.table'></app-table>
+
+  <app-resources [res]='MsmDummy.res'></app-resources>
+  <app-arrow-banner [arrBanner]='MsmDummy.arrBanner4'></app-arrow-banner>
+  <app-interested></app-interested>
+</main>

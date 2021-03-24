@@ -1,0 +1,22 @@
+<div class="apply">
+  <div class="apply-content">
+    <h3>{{apply.title}}</h3>
+    <div class="apply-content-path">
+      <div>
+        <i class="apply-number-icon">1</i>
+        <p class="step1">Create a FREE job search profile.</p>
+      </div>
+      <img src="/assets/vectors-new/apply-arr.svg" alt="">
+      <div>
+        <i class="apply-number-icon">2</i>
+        <p class="step2">Upload or build your stand-out resume.</p>
+      </div>
+      <img src="/assets/vectors-new/apply-arr.svg" alt="">
+      <div>
+        <i class="apply-number-icon">3</i>
+        <p class="step3">Apply for virtual dream jobs!</p>
+      </div>
+    </div>
+    <button class="red-btn" [routerLink]="['/auth', {outlets: {auth:'login'}}]">{{apply.btn}}</button>
+  </div>
+</div>

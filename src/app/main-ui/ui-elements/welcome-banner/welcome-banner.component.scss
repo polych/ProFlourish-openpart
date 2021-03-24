@@ -1,0 +1,86 @@
+@import "/src/assets/scss/colors";
+
+.wc-banner {
+  padding: 90px 0 120px;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $gray;
+  position: relative;
+  > div {
+    width: 1110px;
+  }
+  &-text {
+    h1 {
+      width: 650px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 27px;
+      width: 485px;
+    }
+    button {
+      margin-top: 30px;
+    }
+  }
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 100px;
+    position: relative;
+  }
+}
+.wc-vector {
+  position: absolute;
+  height: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.wc-homepage {
+  width: 1110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      width: auto;
+      text-align: center;
+    }
+    p {
+      margin: 20px;
+    }
+  }
+  &-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 970px;
+    > div {
+      width: 240px;
+    }
+  }
+  &::after {
+    content: url('/assets/vectors-new/homepage1.svg');
+    position: absolute;
+    right: 0px;
+    top: 60px;
+  }
+  &::before {
+    content: url('/assets/vectors-new/homepage2.svg');
+    position: absolute;
+    left: 0px;
+    bottom: -60px;
+  }
+}

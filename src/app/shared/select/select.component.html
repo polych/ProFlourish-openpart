@@ -1,0 +1,13 @@
+<div class="select">
+  <div class="select-label" (click)="active()">{{label}}</div>
+  <div class="select-body" id="select" (click)="active()">
+    <p class="smaller-p-gray"*ngIf="!selectedTitle">{{placeHolder}}</p>
+    <p class="smaller-p-gray"*ngIf="selectedTitle">{{selectedTitle}}</p>
+    <i class="arw-down-icon"></i>
+  </div>
+  <div class="select-dropdown" [ngClass]="{'select-dropdown-active':_active, 'no-label': label == null || ''}">
+    <div class="select-dropdown-item" id="selectedItem" (click)="setSelected($event)" *ngFor="let item of selectItems">
+      {{item}}
+    </div>
+  </div>
+</div>

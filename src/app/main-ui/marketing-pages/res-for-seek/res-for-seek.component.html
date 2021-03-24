@@ -1,0 +1,67 @@
+
+<div class="vsa">
+  <app-welcome-banner [wcBanner]='rfsDummy.WcBanner'></app-welcome-banner>
+  <div class="rfs">
+    <div class="crafting">
+      <div>
+        <h3>Crafting a winning resume</h3>
+        <p class="smaller-p smaller-p-gray">You’re already juggling ‘all the things’ in your business and you know you
+          needed an extra
+          pair of hands on your team (like, yesterday) which is where we come in! Let us take care of (copy to be
+          completed here…) </p>
+        <button class="border-btn">Learn more →</button>
+      </div>
+      <img src="/assets/images/rfs1.svg" alt="">
+    </div>
+    <div class="tips-container">
+      <div class="tips">
+        <h5>{{rfsDummy.skillSet.subtitle}}</h5>
+        <h3>{{rfsDummy.skillSet.title}}</h3>
+        <div class="skillset-skill" *ngFor="let skill of rfsDummy.skillSet.skills">
+          <h2>{{skill.number}}</h2>
+          <p>{{skill.text}}</p>
+          <i class="arrow"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="start">
+      <h3>Start set your career with Proflourish</h3>
+      <button class="red-btn">Find Job</button>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div>
+          <h3>What is Virtual Work? </h3>
+          <p class="smaller-p smaller-p-gray">Let us help by hand-selecting and hiring you the high-impact virtual team of your dreams. In our Done-For-You
+          </p>
+          <button class="border-btn">Learn more →</button>
+        </div>
+        <img src="/assets/images/rfs2.svg" alt="">
+      </div>
+      <div class="step2">
+        <h3>Successful work from home set-up + tips</h3>
+        <p class="smaller-p smaller-p-gray">Let us help by hand-selecting and hiring you the high-impact virtual team of your dreams. In our Done-For-You
+        </p>
+        <button class="border-btn">Learn more →</button>
+      </div>
+      <div class="step">
+        <div>
+          <h3>Setting yourself up for success as a contractor</h3>
+          <p class="smaller-p smaller-p-gray">Let us help by hand-selecting and hiring you the high-impact virtual team of your dreams. In our Done-For-You
+          </p>
+          <button class="border-btn">Learn more →</button>
+        </div>
+        <img src="/assets/images/rfs3.svg" alt="">
+      </div>
+      <div class="step2">
+        <h3>Prepping for day 1</h3>
+        <p class="smaller-p smaller-p-gray">Operation a virtual business has its own set of challenges, which is why all of our tools and templates are
+          built with you exclusively in mind. From onboarding to meeting structures, there’s something here for you</p>
+        <button class="border-btn">Learn more →</button>
+      </div>
+    </div>
+  </div>
+  <app-interested></app-interested>
+</div>

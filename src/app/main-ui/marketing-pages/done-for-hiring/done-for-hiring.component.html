@@ -1,0 +1,139 @@
+<div class="dfh">
+  <app-welcome-banner [wcBanner]='dfhDummy.WcBanner'></app-welcome-banner>
+  <div class="info1">
+    <p>
+      Whether you're looking for your very first hire or you’re scaling your existing team to hit 6, 7, or 8 figures in
+      profit, we know hiring can feel like a colossal “to-do” on your already neverending list of <a href=""
+        class="blue-a">#allthethings.</a>
+      <br><br>
+      <strong>So, let us ask you this: <br></strong>
+      What would it mean to you if you could delegate everything from defining who to hire to actually hiring your next
+      employee or contractor?
+      <br><br>
+      <strong>
+        We heard your sigh of relief. It would feel pretty incredible, right?! This is where we come in! Our expertise
+        in hands-on hiring, and (comfortably) scaling virtual teams, combined with the big growth goals you have or your
+        business, makes us unstoppable.
+      </strong>
+    </p>
+    <img src="/assets/images/dfh1.svg" alt="">
+  </div>
+  <div class="book">
+    <h3>
+      Pick our brains about your hiring needs!
+    </h3>
+    <p><strong>Book a consult with us</strong> - your dedicated virtual recruitment specialists.</p>
+    <button class="red-btn">Book Your Free Consult</button>
+  </div>
+  <div class="offboard-container">
+    <div class="offboard">
+      <div>
+        <h3>
+          Offboard Your Hiring Process,
+          Onboard For Success
+        </h3>
+        <p>
+          You’ve got clients to serve, a customer base to grow and a business to run.
+          <br><br>
+          Offboarding your hiring process not only saves you time and money (and maybe a little sanity!) it’s going to
+          guarantee your next hire is going to be the right one, and have the highest impact and ROI in your business
+          from
+          day one as possible.
+          <br><br>
+          There’s a better way to grow your team in a high-touch way without it feeling like you have to ‘hit pause’ on
+          your business..
+        </p>
+      </div>
+      <img src="/assets/images/dfh2.svg" alt="">
+    </div>
+  </div>
+  <div class="let-us">
+    <h3>
+      Let us take hiring off your hands!
+    </h3>
+    <p>
+      In a completely custom recruitment package unique to you, we work alongside you as an extension of your team to
+      take care of everything that goes into hiring your next (or first) ‘perfect fit’ team member.
+    </p>
+  </div>
+  <div class="how-does">
+    <h3>How exactly does Done-For-You Recruitment work?</h3>
+    <div class="skillset-skills">
+      <div class="skillset-skill" *ngFor="let skill of dfhDummy.skillSet.skills">
+        <h2>{{skill.number}}</h2>
+        <p>{{skill.text}}</p>
+      </div>
+    </div>
+    <p class="smaller-p">
+      Our Done-For-You Recruitment Services are professional services. <br>
+      We hire for your business, as if it were our own; it’s the key to finding you the best virtual hire.
+    </p>
+  </div>
+  <div class="yvb">
+    <h3>
+      Your virtual business is growing.
+    </h3>
+    <p>Together we can make sure you keep it that way by hiring for success!</p>
+    <button class="white-btn">Book Your Free Consult</button>
+  </div>
+  <div class="get-to">
+    <div class="step1">
+      <div>
+        <h4>
+          {{dfhDummy.yvb.step1.title}}
+        </h4>
+        <p>
+          {{dfhDummy.yvb.step1.desc}}
+        </p>
+        <div class="buss-item" *ngFor="let buss of dfhDummy.yvb.step1.list">
+          <i class="buss-list-icon"></i>
+          <p>{{buss}}</p>
+        </div>
+      </div>
+      <img src="{{dfhDummy.yvb.step1.img}}" alt="">
+    </div>
+    <div class="step2">
+      <img src="{{dfhDummy.yvb.step2.img}}" alt="">
+      <div>
+        <h4>
+          {{dfhDummy.yvb.step2.title}}
+        </h4>
+        <div class="buss-item" *ngFor="let buss of dfhDummy.yvb.step2.list">
+          <i class="buss-list-icon"></i>
+          <p>{{buss}}</p>
+        </div>
+      </div>
+    </div>
+    <h5>
+      Can you think of anything savvier than outsourcing your hiring and winning back the hours and days required by you
+      and your team to hire? We’ll wait 😉
+    </h5>
+  </div>
+  <div class="quote">
+    <span>
+      “
+    </span>
+    <div>
+      <h3>
+        Teamwork divides the tasks but doubles the success
+      </h3>
+      <p class="smaller-p"> Anonymous </p>
+    </div>
+  </div>
+  <div class="rows">
+    <h3>We’ve got the answers to your hiring questions!</h3>
+    <div class="rows-row" *ngFor="let info of dfhDummy.rows.list; let i = index ">
+      <div>
+        <h5 class="title" [attr.data-row-index]="'0'+(i+1)">{{info.title}}</h5>
+        <p>{{info.desc}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="book book2">
+    <h3>
+      Your virtual business deserves inspired, dedicated, impactful employees.
+    </h3>
+    <p>Take the first step towards building a flourishing virtual team that accomplishes remarkable things.</p>
+    <button class="red-btn">Book Your Free Consult</button>
+  </div>
+</div>

@@ -1,0 +1,81 @@
+@import "/src/assets/scss/colors";
+
+footer {
+  box-sizing: border-box;
+  width: inherit;
+  background-color: $white;
+  padding-top: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  >div {
+    width: 1110px;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: row;
+    > * {
+      width: 255px;
+    }
+    .footer-nav-column {
+      display: flex;
+      flex-direction: column;
+      margin-left: 30px;
+      h5 {
+        line-height: 34px;
+      }
+      a {
+        margin-top: 20px;
+      }
+    }
+    .footer-heading {
+      h4 {
+        cursor: pointer;
+      }
+      p {
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      .footer-social {
+        display: flex;
+        flex-direction: row;
+        .insta-icon {
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+
+  .footer-banner {
+    margin: 40px 0px;
+    padding: 20px 296px;
+    width: auto;
+    background-color: $gray;
+  }
+  hr {
+    color: #EFEDED;
+  }
+  .footer-cr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    div {
+      width: 410px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+  }
+
+}
+.footer-dark {
+  background-color: $black;
+  padding-top: 0px;
+  *{
+    color: $white;
+
+  }
+}

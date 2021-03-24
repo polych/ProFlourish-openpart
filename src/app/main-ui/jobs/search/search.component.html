@@ -1,0 +1,145 @@
+<div class="body">
+  <app-header></app-header>
+  <main class="search-page">
+    <div class="search-page-header">
+      <div class="back">
+        <a (click)='_location.back()'>
+          <i class="back-arrow"></i>
+          Back
+        </a>
+        <div>
+          <a [routerLink]="['']"><u>Home</u></a>→Find Your Virtual Dream Job
+        </div>
+      </div>
+
+      <div class="page-header">
+        <h2>Find Your Virtual Dream Job</h2>
+        <div>
+          <input type="text" placeholder="Search">
+          <button class="red-btn">Find Job</button>
+        </div>
+      </div>
+    </div>
+    <div class="search-page-body">
+      <div class="search-list">
+        <div class="search-list-title">
+          <p>Overall 13 448 vacancies </p>
+          <h5>Law Assistant</h5>
+        </div>
+        <div class="jobs">
+          <div class="jobs-block" *ngFor="let job of jobs | slice:0:5 " [routerLink]="['/job/', job.id ]" routerLinkActive="router-link-active" >
+            <div class="jobs-block-desc">
+              <div>
+                <h5>{{job.job_title}}</h5>
+                <p class="smaller-p smaller-p-gray">{{job.company}}</p>
+                <h5>{{job.salary}}</h5>
+                <p class="smaller-p smaller-p-gray">{{job.comp_desc}}</p>
+              </div>
+              <img src="{{job.image}}" alt="">
+            </div>
+            <div class="jobs-block-buttons" stopPropagation>
+              <div>
+                <button class="border-btn">Add to favorites</button>
+                <button class="black-btn">Apply</button>
+              </div>
+              <div class="share">
+                <small>Share</small>
+                <a class="share-fb"></a>
+                <a class="share-insta"></a>
+                <a class="share-ptr"></a>
+                <i>???</i>
+
+              </div>
+            </div>
+            <div class="jobs-block-footer">
+              <p class="smaller-p smaller-p-gray">
+                <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.5">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M1 7.70136C1.01313 3.9877 4.15778 0.987422 8.02376 1.00004C11.8897 1.01266 15.0131 4.0334 15 7.74705V7.8232C14.9524 10.2372 13.5492 12.4684 11.829 14.2123C10.8451 15.1937 9.74649 16.0625 8.5549 16.8014C8.23628 17.0662 7.76367 17.0662 7.44505 16.8014C5.66868 15.6908 4.10962 14.2885 2.83918 12.6588C1.70686 11.2377 1.06397 9.51277 1 7.7242L1 7.70136Z"
+                      stroke="#200E32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <ellipse cx="7.99934" cy="7.83282" rx="2.24348" ry="2.15508" stroke="#200E32" stroke-width="1.5"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </g>
+                </svg>
+                {{job.city}}
+              </p>
+              <div class="border-block">
+                {{job.added|date}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="filters">
+        <div class="filters-title">
+          <h5>Filters</h5>
+          <p class="blue-a">Reset filters</p>
+        </div>
+        <div class="filters-selected">
+          <div class="filters-selected-filter">
+            Design &#10005;
+          </div>
+          <div class="filters-selected-filter">
+            Law Assistant &#10005;
+          </div>
+          <div class="filters-selected-filter">
+            Sales &#10005;
+          </div>
+        </div>
+        <div class="filters-category">
+          <p>Job category</p>
+          <div class="filters-category-filter" *ngFor="let filter of jobs | slice:0:7">
+            <label class="control control-checkbox">
+              {{filter.job_title}}
+              <input type="checkbox" formControlName='rememberMe' id="rememberMe" />
+              <div class="control_indicator"></div>
+            </label>
+            <p>{{filter.id}}</p>
+          </div>
+        </div>
+        <div class="filters-category">
+          <p>Job category</p>
+          <div class="filters-category-filter" *ngFor="let filter of jobs | slice:0:3">
+            <label class="control control-checkbox">
+              {{filter.job_title}}
+              <input type="checkbox" formControlName='rememberMe' id="rememberMe" />
+              <div class="control_indicator"></div>
+            </label>
+            <p>{{filter.id}}</p>
+          </div>
+        </div>
+        <div class="filters-category">
+          <p>Job category</p>
+          <div class="filters-category-filter" *ngFor="let filter of jobs | slice:0:5">
+            <label class="control control-checkbox">
+              {{filter.job_title}}
+              <input type="checkbox" formControlName='rememberMe' id="rememberMe" />
+              <div class="control_indicator"></div>
+            </label>
+            <p>{{filter.id}}</p>
+          </div>
+        </div>
+        <div class="filters-salary">
+          <p>Salary</p>
+          <div class="filters-salary-range">
+            <div>
+              <label for="minSalary">Paying</label>
+              <input type="text" value="$ 10 000">
+            </div>
+            <div>
+              <label for="minSalary">To</label>
+              <input type="text" value="$ 100 000">
+            </div>
+          </div>
+          <label class="control control-checkbox">
+            <input type="checkbox" formControlName='rememberMe' id="rememberMe" />
+            <div class="control_indicator"></div>
+            Only show vacancies that list salary
+          </label>
+        </div>
+      </div>
+    </div>
+  </main>
+  <app-footer></app-footer>
+</div>
